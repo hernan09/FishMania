@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Ocean Eater</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game"></canvas>
+
+      <div id="hud">
+        <div class="stat">
+          <span class="label">Vidas</span>
+          <span id="lives">❤❤❤</span>
+        </div>
+        <div class="stat">
+          <span class="label">Comidos</span>
+          <span id="eaten">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Nivel</span>
+          <span id="level">1</span>
+        </div>
+        <div class="stat bar-wrap">
+          <span class="label">Crecimiento</span>
+          <div class="bar"><div id="growth-bar"></div></div>
+          <span id="growth-text">0 / 20</span>
+        </div>
+      </div>
+
+      <div id="toast" class="hidden"></div>
+      <div id="overlay" class="hidden">
+        <div class="card">
+          <h1 id="overlay-title">Ocean Eater</h1>
+          <p id="overlay-msg">Movete arriba/abajo. Comé peces más chicos. ¡Cuidado con los grandes!</p>
+          <button id="btn-start" type="button">Jugar</button>
+        </div>
+      </div>
+
+      <div id="joystick">
+        <div id="stick"></div>
+      </div>
+
+      <button id="shield-btn" type="button" aria-label="Escudo burbuja">
+        <span class="shield-icon">🫧</span>
+        <span id="shield-label">Escudo</span>
+      </button>
+
+      <div id="hint">Arriba / abajo · comé los más chicos · escudo: botón o Espacio</div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
